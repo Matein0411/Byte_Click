@@ -153,7 +153,7 @@ export default function Form() {
                return (
               <ProductCard
              productId={productId}
-             key={productId} // Clave única añadida aquí
+             key={productId} 
              setData={setData}
            />
          );
@@ -186,7 +186,7 @@ export default function Form() {
             {products?.map((item) => {
             return (
             <option
-               key={item?.id} // Clave única añadida aquí
+               key={item?.id}
                  disabled={data?.products?.includes(item?.id)}
                value={item?.id}
             >
