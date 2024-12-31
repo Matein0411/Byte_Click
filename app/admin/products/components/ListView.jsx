@@ -195,7 +195,7 @@ function Row({ item, index }) {
         </div>
       </td>
       <td className="border-y bg-white px-3 py-2 border-r rounded-r-lg">
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center justify-center">
           <Button
             onClick={handleUpdate}
             isDisabled={isDeleting}
