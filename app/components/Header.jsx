@@ -1,8 +1,8 @@
 import { Heart, Search, ShoppingCart, UserCircle2 } from "lucide-react";
 import Link from "next/link";
-//import LogoutButton from "./LogoutButton";
+import LogoutButton from "./LogoutButton";
 import AuthContextProvider from "@/context/AuthContext";
-//import HeaderClientButtons from "./HeaderClientButtons";
+import HeaderClientButtons from "./HeaderClientButtons";
 //import AdminButton from "./AdminButton";
 
 export default function Header() {
@@ -49,7 +49,7 @@ export default function Header() {
           </button>
         </Link>
         <AuthContextProvider>
-         {/* <HeaderClientButtons /> */}
+        <HeaderClientButtons /> 
         </AuthContextProvider>
         <Link href={`/account`}>
           <button
@@ -60,7 +60,7 @@ export default function Header() {
           </button>
         </Link>
         <AuthContextProvider>
-         {/* <LogoutButton /> */}
+         <LogoutButton />
         </AuthContextProvider>
       </div>
     </nav>
