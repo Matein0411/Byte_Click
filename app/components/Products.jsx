@@ -1,10 +1,10 @@
 import Link from "next/link";
-//import FavoriteButton from "./FavoriteButton";
 import AuthContextProvider from "@/context/AuthContext";
-//import AddToCartButton from "./AddToCartButton";
+import AddToCartButton from "./AddToCartButton";
 import { getProductReviewCounts } from "@/lib/firestore/products/count/read";
 import { Suspense } from "react";
-//import MyRating from "./MyRating";
+import FavoriteButton from "./FavoriteButton";
+import MyRating from "./MyRating";
 
 export default function ProductsGridView({ products }) {
   return (
@@ -32,10 +32,7 @@ export function ProductCard({ product }) {
         />
         <div className="absolute top-1 right-1">
           <AuthContextProvider>
-           {
-           /* <FavoriteButton productId={product?.id} />
-
-           */} 
+          <FavoriteButton productId={product?.id} />
           </AuthContextProvider>
         </div>
       </div>
@@ -72,10 +69,7 @@ export function ProductCard({ product }) {
           </Link>
         </div>
         <AuthContextProvider>
-         {/*
-            
          <AddToCartButton productId={product?.id} />
-         */} 
         </AuthContextProvider>
       </div>
     </div>
@@ -86,10 +80,9 @@ async function RatingReview({ product }) {
   const counts = await getProductReviewCounts({ productId: product?.id });
   return (
     <div className="flex gap-3 items-center">
-     {/*
-
+     
      <MyRating value={counts?.averageRating ?? 0} />
-     */} 
+
       <h1 className="text-xs text-gray-400">
         <span>{counts?.averageRating?.toFixed(1)}</span> ({counts?.totalReviews}
         )

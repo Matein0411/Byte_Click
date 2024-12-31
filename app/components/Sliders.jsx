@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import Slider from "react-slick";
-//import FavoriteButton from "./FavoriteButton";
+import FavoriteButton from "./FavoriteButton";
 import AuthContextProvider from "@/context/AuthContext";
-//import AddToCartButton from "./AddToCartButton";
+import AddToCartButton from "./AddToCartButton";
 
 export default function FeaturedProductSlider({ featuredProducts }) {
   var settings = {
@@ -44,8 +44,8 @@ export default function FeaturedProductSlider({ featuredProducts }) {
                           BUY NOW
                         </button>
                       </Link>
-                      {/*<AddToCartButton productId={product?.id} type={"large"} />
-                      <FavoriteButton productId={product?.id} />*/}
+                      <AddToCartButton productId={product?.id} type={"large"} />
+                      <FavoriteButton productId={product?.id} />
                     </div>
                   </AuthContextProvider>
                 </div>
