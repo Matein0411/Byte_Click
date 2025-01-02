@@ -21,7 +21,7 @@ export default function HeaderClientButtons() {
           >
             <button
               title="My Favorites"
-              className="h-8 w-8 flex justify-center items-center rounded-full hover:bg-gray-50"
+              className="h-8 w-8 flex justify-center items-center rounded-full hover:bg-[#4d4d4d]"
             >
               <Heart size={14} />
             </button>
@@ -30,7 +30,7 @@ export default function HeaderClientButtons() {
         {(data?.favorites?.length ?? 0) === 0 && (
           <button
             title="My Favorites"
-            className="h-8 w-8 flex justify-center items-center rounded-full hover:bg-gray-50"
+            className="h-8 w-8 flex justify-center items-center rounded-full hover:bg-[#4d4d4d]"
           >
             <Heart size={14} />
           </button>
@@ -46,7 +46,7 @@ export default function HeaderClientButtons() {
           >
             <button
               title="My Cart"
-              className="h-8 w-8 flex justify-center items-center rounded-full hover:bg-gray-50"
+              className="h-8 w-8 flex justify-center items-center rounded-full hover:bg-[#4d4d4d]"
             >
               <ShoppingCart size={14} />
             </button>
@@ -55,7 +55,7 @@ export default function HeaderClientButtons() {
         {(data?.carts?.length ?? 0) === 0 && (
           <button
             title="My Cart"
-            className="h-8 w-8 flex justify-center items-center rounded-full hover:bg-gray-50"
+            className="h-8 w-8 flex justify-center items-center rounded-full hover:bg-[#4d4d4d]"
           >
             <ShoppingCart size={14} />
           </button>

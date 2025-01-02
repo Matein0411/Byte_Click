@@ -21,15 +21,15 @@ export default function Header() {
     },
   ];
   return (
-    <nav className="sticky top-0 z-50 bg-white bg-opacity-65 backdrop-blur-2xl py-3 px-4 md:py-4 md:px-16 border-b flex items-center justify-between">
+    <nav className="sticky top-0 z-50 bg-black bg-opacity-85 text-white py-3 px-4 md:py-4 md:px-16 border-b border-[#2E2E2E] flex items-center justify-between">
       <Link href={"/"}>
-        <img className="h-4 md:h-5" src="/logo.png" alt="Logo" />
+        <img className="h-8 md:h-8" src="/logo.png" alt="Logo" />
       </Link>
       <div className="hidden md:flex gap-2 items-center font-semibold">
         {menuList?.map((item) => {
           return (
             <Link href={item?.link}>
-              <button className="text-sm px-4 py-2 rounded-lg hover:bg-gray-50">
+              <button className="text-sm px-4 py-2 rounded-lg hover:bg-[#4d4d4d]">
                 {item?.name}
               </button>
             </Link>
@@ -43,24 +43,24 @@ export default function Header() {
         <Link href={`/search`}>
           <button
             title="Search Products"
-            className="h-8 w-8 flex justify-center items-center rounded-full hover:bg-gray-50"
+            className="h-8 w-8 flex justify-center items-center rounded-full hover:bg-[#4d4d4d]"
           >
             <Search size={14} />
           </button>
         </Link>
         <AuthContextProvider>
-        <HeaderClientButtons /> 
+         <HeaderClientButtons /> 
         </AuthContextProvider>
         <Link href={`/account`}>
           <button
             title="My Account"
-            className="h-8 w-8 flex justify-center items-center rounded-full hover:bg-gray-50"
+            className="h-8 w-8 flex justify-center items-center rounded-full hover:bg-[#4d4d4d]"
           >
             <UserCircle2 size={14} />
           </button>
         </Link>
         <AuthContextProvider>
-         <LogoutButton />
+         <LogoutButton /> 
         </AuthContextProvider>
       </div>
     </nav>
