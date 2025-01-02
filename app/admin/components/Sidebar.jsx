@@ -67,7 +67,7 @@ export default function Sidebar() {
     },
   ];
   return (
-    <section className="sticky top-0 flex flex-col gap-10 bg-white border-r px-5 py-3 h-screen overflow-hidden w-[260px] z-50">
+    <section className="text-white sticky top-0 flex flex-col gap-10 bg-[#363535] border-r px-5 py-3 h-screen overflow-hidden w-[260px] z-50">
       <div className="flex justify-center py-4">
         <Link href={`/`}>
           <img className="h-8" src="/logo.png" alt="" />
@@ -93,7 +93,7 @@ export default function Sidebar() {
           }}
           className="flex gap-2 items-center px-3 py-2 hover:bg-indigo-100 rounded-xl w-full justify-center ease-soft-spring duration-400 transition-all"
         >
-          <LogOut className="h-5 w-5" /> Logout
+          <LogOut className="text-white h-5 w-5" /> Logout
         </button>
       </div>
     </section>
@@ -107,7 +107,7 @@ function Tab({ item }) {
     <Link href={item?.link}>
       <li
         className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold ease-soft-spring transition-all duration-300
-        ${isSelected ? "bg-[#879fff] text-white" : "bg-white text-black"} 
+        ${isSelected ? "bg-[#74d3c3] text-white" : "bg-white text-black"} 
         `}
       >
         {item?.icon} {item?.name}

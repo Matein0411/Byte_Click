@@ -39,7 +39,7 @@ export default function Page() {
       </div>
       <div>
         <Link href={`/checkout?type=cart`}>
-          <button className="bg-blue-500 px-5 py-2 text-sm rounded-lg text-white">
+          <button className="bg-[#31a898] px-5 py-2 text-sm rounded-lg text-white">
             Checkout
           </button>
         </Link>

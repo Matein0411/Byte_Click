@@ -25,7 +25,7 @@ export default function LogoutButton() {
           toast.error(error?.message);
         }
       }}
-      className="h-8 w-8 flex justify-center items-center rounded-full hover:bg-gray-50"
+      className="h-8 w-8 flex justify-center items-center rounded-full hover:bg-[#4d4d4d]"
     >
       <LogOut size={14} />
     </button>

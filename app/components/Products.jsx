@@ -40,10 +40,10 @@ export function ProductCard({ product }) {
         <h1 className="font-semibold line-clamp-2 text-sm">{product?.title}</h1>
       </Link>
       <div className="">
-        <h2 className="text-green-500 text-sm font-semibold">
-          ₹ {product?.salePrice}{" "}
+        <h2 className="text-red-500 text-sm font-semibold">
+          $ {product?.salePrice}{" "}
           <span className="line-through text-xs text-gray-600">
-            ₹ {product?.price}
+            $ {product?.price}
           </span>
         </h2>
       </div>
@@ -63,7 +63,7 @@ export function ProductCard({ product }) {
       <div className="flex items-center gap-4 w-full">
         <div className="w-full">
           <Link href={`/checkout?type=buynow&productId=${product?.id}`}>
-            <button className="flex-1 bg-blue-500 text-white px-4 py-2 rounded-lg text-xs w-full">
+            <button className="flex-1 bg-[#31a898] text-white px-4 py-2 rounded-lg text-xs w-full">
               Buy Now
             </button>
           </Link>

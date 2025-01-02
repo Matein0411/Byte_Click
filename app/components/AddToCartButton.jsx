@@ -57,15 +57,15 @@ export default function AddToCartButton({ productId, type }) {
 
   if (type === "large") {
     return (
-      <Button
-        isLoading={isLoading}
-        isDisabled={isLoading}
-        onClick={handlClick}
-        variant="bordered"
-        className=""
-        color="primary"
-        size="sm"
-      >
+    <Button
+      isLoading={isLoading}
+      isDisabled={isLoading}
+      onClick={handlClick}
+      variant="bordered"
+      className=" hover:bg-[#a3dfd1] text-[#39a194] border-2 border-[#39a194]"
+      color="primary"
+      size="s"
+    >
         {!isAdded && <AddShoppingCartIcon className="text-xs" />}
         {isAdded && <ShoppingCartIcon className="text-xs" />}
         {!isAdded && "Add To Cart"}

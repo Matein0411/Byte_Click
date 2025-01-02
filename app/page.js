@@ -10,6 +10,7 @@ import CustomerReviews from "./components/CustomerReviews";
 import Brands from "./components/Brands";
 import { getBrands } from "@/lib/firestore/brands/read_server";
 import Footer from "./components/Footer";
+import ChatButton from "./components/Chat";
 
 
 export default async function Home() {
@@ -28,6 +29,7 @@ export default async function Home() {
         <ProductsGridView products={products} />
         <CustomerReviews></CustomerReviews>
         <Brands brands= {brands}></Brands>
+        <ChatButton/>
         <Footer/>
 
     </main>
