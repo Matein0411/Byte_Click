@@ -188,7 +188,7 @@ export default function Checkout({ productList }) {
                     <h3 className="text-green-600 font-semibold text-[10px]">
                       ₹ {item?.product?.salePrice}{" "}
                       <span className="text-black">X</span>{" "}
-                      <span className="text-gray-600">{item?.quantity}</span>
+                      <span className="text-gray-500">{item?.quantity}</span>
                     </h3>
                   </div>
                   <div>
