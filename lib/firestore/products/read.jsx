@@ -71,25 +71,24 @@ export function useProduct({ productId }) {
     isLoading: data === undefined,
   };
 }
-////////////////////////////////////
+
 export function useProductsByIds({ idsList }) {
   const { data, error } = useSWRSubscription(
     ["products", idsList],
     ([path, idsList], { next }) => {
       const ref = collection(db, path);
-      let q = query(ref, where ("id", "in", idsList));
 
-     
+      let q = query(ref, where("id", "in", idsList));
+
       const unsub = onSnapshot(
         q,
         (snapshot) =>
           next(
-              null, 
-              snapshot.docs.length === 0
-                ? []
-                : snapshot.docs.map((snap) => snap.data()),
-            
-              ),
+            null,
+            snapshot.docs.length === 0
+              ? []
+              : snapshot.docs.map((snap) => snap.data())
+          ),
         (err) => next(err, null)
       );
       return () => unsub();
@@ -101,29 +100,4 @@ export function useProductsByIds({ idsList }) {
     error: error?.message,
     isLoading: data === undefined,
   };
-}
-
-export function useProduct({ productId }) {
-  const { data, error } = useSWRSubscription(
-    ["products", productId],
-    ([path, productId], { next }) => {
-      const ref = doc(db, `${path}/${productId}`);
-
-      const unsub = onSnapshot(
-        ref,
-        (snapshot) => next(null, snapshot.data()),
-        (err) => next(err, null)
-      );
-      return () => unsub();
-    }
-  );
-
-  return {
-    data: data,
-    error: error?.message,
-    isLoading: data === undefined,
-  };
-}
-
-
-
+};
