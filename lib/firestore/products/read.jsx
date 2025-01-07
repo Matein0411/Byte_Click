@@ -100,4 +100,4 @@ export function useProductsByIds({ idsList }) {
     error: error?.message,
     isLoading: data === undefined,
   };
-}
+};
