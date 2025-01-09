@@ -2,10 +2,10 @@
 "use client";
 
 import { useAuth } from "@/context/AuthContext";
-/*import {
+import {
   createCheckoutAndGetURL,
   createCheckoutCODAndGetId,
-} from "@/lib/firestore/checkout/write";*/
+} from "@/lib/firestore/checkout/write";
 import { Button } from "@nextui-org/react";
 import confetti from "canvas-confetti";
 import { CheckSquare2Icon, Square } from "lucide-react";
