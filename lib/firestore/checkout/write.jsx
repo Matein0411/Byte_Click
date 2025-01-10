@@ -11,7 +11,7 @@ export const createCheckoutAndGetURL = async ({ uid, products, address }) => {
   products.forEach((item) => {
     line_items.push({
       price_data: {
-        currency: "inr",
+        currency: "usd",
         product_data: {
           name: item?.product?.title ?? "",
           description: item?.product?.shortDescription ?? "",
@@ -23,7 +23,7 @@ export const createCheckoutAndGetURL = async ({ uid, products, address }) => {
             productId: item?.id,
           },
         },
-        unit_amount: item?.product?.salePrice * 100,
+        unit_amount: Math.round(item?.product?.salePrice * 100),
       },
       quantity: item?.quantity ?? 1,
     });
@@ -98,7 +98,7 @@ export const createCheckoutCODAndGetId = async ({ uid, products, address }) => {
   products.forEach((item) => {
     line_items.push({
       price_data: {
-        currency: "inr",
+        currency: "usd",
         product_data: {
           name: item?.product?.title ?? "",
           description: item?.product?.shortDescription ?? "",
