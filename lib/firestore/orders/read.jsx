@@ -13,6 +13,27 @@ import {
 } from "firebase/firestore";
 import useSWRSubscription from "swr/subscription";
 
+export function useOrder({ id }) {
+  const { data, error } = useSWRSubscription(
+    ["orders", id],
+    ([path, id], { next }) => {
+      const ref = doc(db, `orders/${id}`);
+      const unsub = onSnapshot(
+        ref,
+        (snapshot) => next(null, snapshot.data()),
+        (err) => next(err, null)
+      );
+      return () => unsub();
+    }
+  );
+
+  if (error) {
+    console.log(error?.message);
+  }
+
+  return { data, error: error?.message, isLoading: data === undefined };
+}
+
 export function useOrders({ uid }) {
     const { data, error } = useSWRSubscription(
       ["orders", uid],
