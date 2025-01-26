@@ -3,7 +3,7 @@
 import { useOrder } from "@/lib/firestore/orders/read";
 import { CircularProgress } from "@nextui-org/react";
 import { useParams } from "next/navigation";
-import ChangeOrderStatus from "../components/ChangeStatus";
+import ChangeOrderStatus from "./components/ChangeStatus";
 
 export default function Page() {
   const { orderId } = useParams();

@@ -15,6 +15,12 @@ export default function Page() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState({});
+  // const [data, setData] = useState({
+  //   email: "",
+  //   password: "",
+  //   name: "", // Solo en Sign Up
+  // });
+  
 
   const handleData = (key, value) => {
     setData({
@@ -33,7 +39,7 @@ export default function Page() {
       await updateProfile(credential.user, {
         displayName: data?.name,
       });
-      const user = credentiajl.user;
+      const user = credential.user;
       await createUser({
         uid: user?.uid,
         displayName: data?.name,

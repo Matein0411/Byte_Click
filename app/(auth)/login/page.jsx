@@ -27,6 +27,28 @@ export default function Page() {
       [key]: value,
     });
   };
+    // const [data, setData] = useState({
+    //   email: "",
+    //   password: "",
+    // });
+    
+    // const handleData = (key, value) => {
+    //   setData((prev) => ({
+    //     ...prev,
+    //     [key]: value,
+    //   }));
+    // };
+    
+    // <input
+    //   placeholder="Enter Your Email"
+    //   type="email"
+    //   name="user-email"
+    //   id="user-email"
+    //   value={data.email}
+    //   onChange={(e) => handleData("email", e.target.value)}
+    //   className="px-3 py-2 rounded-xl border focus:outline-none w-full"
+    // />;
+  
 
   const handleLogin = async () => {
     setIsLoading(true);
