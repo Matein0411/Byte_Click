@@ -5,11 +5,13 @@ import Slider from "react-slick";
 export default function Brands({ brands }) {
   var settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 5,
     initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024,
@@ -52,7 +54,7 @@ export default function Brands({ brands }) {
           return (
             <div key={brand?.id} className="px-2">
               <div className="flex flex-col gap-2 items-center justify-center">
-                <div className="h-20 rounded-lg md:p-5 p-2 border overflow-hidden">
+                <div className="h-24 md:h-28 rounded-lg md:p-5 p-2 border overflow-hidden">
                   <img
                     className="h-full w-full object-cover"
                     src={brand?.imageURL}
