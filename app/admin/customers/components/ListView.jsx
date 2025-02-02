@@ -34,10 +34,11 @@ export default function ListView() {
           </tr>
         </thead>
         <tbody>
-          {users?.map((item, index) => {
-            return <Row index={index} item={item} key={item?.id} />;
-          })}
+        {users?.map((item, index) => {
+          return <Row index={index} item={item} key={item?.id || `user-${index}`} />;
+        })}
         </tbody>
+        
       </table>
     </div>
   );

@@ -60,7 +60,7 @@ export function ProductCard({ product }) {
           </h3>
         </div>
       )}
-      <div className="flex items-center gap-4 w-full">
+    <div className="flex items-center gap-4 w-full mt-auto">
         <div className="w-full">
           <Link href={`/checkout?type=buynow&productId=${product?.id}`}>
             <button className="flex-1 bg-[#31a898] text-white px-4 py-2 rounded-lg text-xs w-full">
@@ -79,7 +79,7 @@ export function ProductCard({ product }) {
 async function RatingReview({ product }) {
   const counts = await getProductReviewCounts({ productId: product?.id });
   return (
-    <div className="flex gap-3 items-center">
+    <div className="flex gap-3 items-center mt-auto">
      <MyRating value={counts?.averageRating ?? 0} />
       <h1 className="text-xs text-gray-400">
         <span>{counts?.averageRating?.toFixed(1)}</span> ({counts?.totalReviews}
