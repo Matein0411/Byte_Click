@@ -50,7 +50,7 @@ export default function Brands({ brands }) {
           : brands
         )?.map((brand) => {
           return (
-            <div className="px-2">
+            <div key={brand?.id} className="px-2">
               <div className="flex flex-col gap-2 items-center justify-center">
                 <div className="h-20 rounded-lg md:p-5 p-2 border overflow-hidden">
                   <img

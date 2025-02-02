@@ -51,7 +51,8 @@ export default function Collections({ collections }) {
           : collections
         )?.map((collection) => {
           return (
-            <div className="px-2">
+            <div key={collection?.id} className="px-2">
+            {/* <div className="px-2"> */}
               <div className="flex gap-4 bg-gradient-to-tr  to-[#b0d1cd] from-[#ffffff] p-7 w-full rounded-xl h-full">
                 <div className="w-full flex flex-col gap-2">
                   <div className="flex flex-col gap-4">

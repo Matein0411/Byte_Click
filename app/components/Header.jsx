@@ -28,7 +28,8 @@ export default function Header() {
       <div className="hidden md:flex gap-2 items-center font-semibold">
         {menuList?.map((item) => {
           return (
-            <Link href={item?.link}>
+            // <Link href={item?.link}>
+            <Link key={item?.link} href={item?.link}> 
               <button className="text-sm px-4 py-2 rounded-lg hover:bg-[#4d4d4d]">
                 {item?.name}
               </button>

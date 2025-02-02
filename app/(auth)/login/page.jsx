@@ -19,7 +19,12 @@ export default function Page() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
-  const [data, setData] = useState({});
+  // const [data, setData] = useState({});
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+  });
+  
 
   const handleData = (key, value) => {
     setData({
