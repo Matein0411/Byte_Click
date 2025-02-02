@@ -41,4 +41,8 @@ export default function Page() {
 function ProductItem({ productId }) {
   const { data: product } = useProduct({ productId: productId });
   return <ProductCard product={product} />;
+  if (!product) return null; 
+
+  return <ProductCard product={product} key={product.id || productId} />;
 }
+

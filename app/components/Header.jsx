@@ -3,7 +3,7 @@ import Link from "next/link";
 import LogoutButton from "./LogoutButton";
 import AuthContextProvider from "@/context/AuthContext";
 import HeaderClientButtons from "./HeaderClientButtons";
-//import AdminButton from "./AdminButton";
+import AdminButton from "./AdminButton";
 
 export default function Header() {
   const menuList = [
@@ -28,7 +28,8 @@ export default function Header() {
       <div className="hidden md:flex gap-2 items-center font-semibold">
         {menuList?.map((item) => {
           return (
-            <Link href={item?.link}>
+            // <Link href={item?.link}>
+            <Link key={item?.link} href={item?.link}> 
               <button className="text-sm px-4 py-2 rounded-lg hover:bg-[#4d4d4d]">
                 {item?.name}
               </button>
@@ -38,7 +39,7 @@ export default function Header() {
       </div>
       <div className="flex items-center gap-1">
         <AuthContextProvider>
-        {/* <AdminButton />*/}
+          <AdminButton />
         </AuthContextProvider>
         <Link href={`/search`}>
           <button

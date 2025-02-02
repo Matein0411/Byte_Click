@@ -2,10 +2,10 @@
 "use client";
 
 import { useAuth } from "@/context/AuthContext";
-/*import {
+import {
   createCheckoutAndGetURL,
   createCheckoutCODAndGetId,
-} from "@/lib/firestore/checkout/write";*/
+} from "@/lib/firestore/checkout/write";
 import { Button } from "@nextui-org/react";
 import confetti from "canvas-confetti";
 import { CheckSquare2Icon, Square } from "lucide-react";
@@ -177,7 +177,7 @@ export default function Checkout({ productList }) {
           <div className="flex flex-col gap-2">
             {productList?.map((item) => {
               return (
-                <div className="flex gap-3 items-center">
+                <div key={item?.product?.id} className="flex gap-3 items-center">
                   <img
                     className="w-10 h-10 object-cover rounded-lg"
                     src={item?.product?.featureImageURL}
