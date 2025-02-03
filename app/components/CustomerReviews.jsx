@@ -9,10 +9,10 @@ export default function CustomerReviews() {
   const [currentPage, setCurrentPage] = useState(0);
   const reviewsPerPage = 3;
 
-  // Filtrar solo reseñas con calificación mayor a 3 estrellas
+
   const filteredReviews = reviews?.filter((review) => review.rating > 3) || [];
 
-  // Paginación
+
   const startIndex = currentPage * reviewsPerPage;
   const paginatedReviews = filteredReviews.slice(startIndex, startIndex + reviewsPerPage);
 
@@ -42,7 +42,7 @@ export default function CustomerReviews() {
           ))}
         </div>
 
-        {/* Controles de paginación */}
+
         {filteredReviews.length > reviewsPerPage && (
           <div className="flex justify-center gap-3 mt-4">
             <button
