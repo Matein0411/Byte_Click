@@ -13,11 +13,11 @@ export default function Header() {
     },
     {
       name: "About",
-      link: "/about-us",
+      link: "/about",
     },
     {
       name: "Contact",
-      link: "/contact-us",
+      link: "/contact",
     },
   ];
   return (
