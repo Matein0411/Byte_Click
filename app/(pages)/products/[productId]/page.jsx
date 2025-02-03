@@ -24,14 +24,12 @@ export default async function Page({ params }) {
   const product = await getProduct({ id: productId });
   return (
     <main className="p-5 md:p-10">
-
-      <section className="flex flex-col md:flex-row gap-3">
-          <Photos
-            imageList={[product?.featureImageURL, ...(product?.imageList ?? [])]}
-          />
-          <Details product={product} />
-        </section>
-
+      <section className="flex flex-col-reverse md:flex-row gap-3">
+        <Photos
+          imageList={[product?.featureImageURL, ...(product?.imageList ?? [])]}
+        />
+        <Details product={product} />
+      </section>
       <div className="flex justify-center py-10">
         <AuthContextProvider>
           <div className="flex flex-col md:flex-row gap-4 md:max-w-[900px] w-full">
