@@ -39,7 +39,7 @@ export default function Page() {
   };
 
   return (
-    <main className="w-full flex justify-center items-center bg-gray-300 md:p-24 p-10 min-h-screen">
+    <main className="w-full flex justify-center items-center bg-gray-700 md:p-24 p-10 min-h-screen">
       <section className="flex flex-col gap-3">
         <div className="flex justify-center">
           <img className="h-12" src="/logo.png" alt="Logo" />
@@ -65,18 +65,11 @@ export default function Page() {
               className="px-3 py-2 rounded-xl border focus:outline-none w-full"
             />
 
-            <Button
-              isLoading={isLoading}
-              isDisabled={isLoading}
-              type="submit"
-              color="primary"
-            >
-              Send Reset Link
-            </Button>
+          <Button className="bg-teal-500 text-white hover:bg-teal-600">Send reset link</Button>
           </form>
           <div className="flex justify-between">
             <Link href={`/login`}>
-              <button className="font-semibold text-sm text-blue-700">
+              <button className="font-semibold text-sm text-green-700">
                 Sign In
               </button>
             </Link>

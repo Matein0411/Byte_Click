@@ -3,7 +3,7 @@
 const ChatButton = () => {
     const handleWhatsAppClick = () => {
       const phoneNumber = "593995623828"; 
-      const message = "Hola, estoy interesado en tus servicios."; 
+      const message = "Hola, estoy interesado en comprar..."; 
       const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
       window.open(whatsappURL, "_blank");
     };
@@ -20,7 +20,7 @@ const ChatButton = () => {
             className="w-6 h-6"
           />
         </div>
-        <span className="font-medium">Chatea conmigo</span>
+        <span className="font-medium">Chat with me</span>
       </div>
     );
   };

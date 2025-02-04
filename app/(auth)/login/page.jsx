@@ -48,7 +48,7 @@ export default function Page() {
               <Button className="bg-teal-500 text-white hover:bg-teal-600">Login</Button>
             </form>
             <div className="flex justify-between">
-                <Link href = {"/Sign-Up"}>
+                <Link href = {"/sign-up"}>
                     <button className="font-semibold text-sm text-green-700">
                         New? Create an account
                     </button>

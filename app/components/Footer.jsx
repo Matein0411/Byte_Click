@@ -33,7 +33,7 @@ export default function Footer() {
         <div className="flex-1 flex flex-col md:flex-row justify-end gap-4">
           <div className="flex gap-2 items-center">
             <Phone size={12} className="text-[#00FF7F]" />
-            <h2 className="text-sm text-gray-100">+593 99956238228</h2>
+            <h2 className="text-sm text-gray-100">+593 9956238228</h2>
           </div>
           <div className="flex gap-2 items-center">
             <Mail size={12} className="text-[#00FF7F]" />
