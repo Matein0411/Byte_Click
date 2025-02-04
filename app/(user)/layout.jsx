@@ -34,7 +34,9 @@ function UserChecking({ children }) {
       <div className="h-screen w-full flex flex-col gap-3 justify-center items-center">
         <h1 className="text-sm text-gray-700">You are not logged In!</h1>
         <Link href={"/login"}>
-        <Button className="bg-teal-500 text-white hover:bg-teal-600">Login</Button>
+        <Button className="bg-teal-500 text-white hover:bg-teal-600">
+          Login
+          </Button>
         </Link>
       </div>
     );
