@@ -30,7 +30,7 @@ git clone https://github.com/Matein0411/Byte_Click.git
 2️⃣ Install dependencies:
 
 ```sh
-cd e-commerce
+cd Byte_Click
 npm install
 ```
 
